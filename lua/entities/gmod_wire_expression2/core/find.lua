@@ -60,6 +60,10 @@ local forbidden_classes = {
 	["predicted_viewmodel"] = true,
 	["gmod_ghost"] = true,
 }
+
+hook.Call("E2.forbidden_classes", GAMEMODE, forbidden_classes);
+
+
 local function filter_default(self)
 	local chip = self.entity
 	return function(ent)
